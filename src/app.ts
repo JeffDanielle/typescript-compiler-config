@@ -7,6 +7,13 @@
 
 const buttonEl = document.querySelector("btn")!;
 
-buttonEl.addEventListener("click", () => {
-    console.log("clicked");
-});
+function clickHandler(message: string) {
+    console.log("Clicked" + message);
+}
+
+if (buttonEl) {
+    buttonEl.addEventListener(
+        "click",
+        clickHandler.bind(null, "You're welcome!")
+    );
+}
